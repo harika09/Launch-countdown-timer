@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+
+:root{
+    /* Fonts */
+    --Red-hat:'Red Hat Text', sans-serif;
+
+    /* Font-size */
+    --Red-hat700: 700;
+}
+
+:root{
+    /* Primary Colors */
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+
+    /* Neutral Colors */
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+.bd-container{
+    max-width: 960px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+body{
+    background-color: var(--Very-dark-mostly-black-blue);
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url(/assets/img/bg-stars.svg)no-repeat;
+    background-size: cover;
+}
+
+.main-container{
+    font-family: var(--Red-hat);
+    background: url(/assets/img/pattern-hills.svg) no-repeat bottom;
+    background-size: contain;
+    min-height: 100vh;
+
+}
+.main-content{
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    right: 100px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+
+.main-content h1{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #fff;
+    font-weight: var(--Red-hat700);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.main-content .countdown{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    color: var(--Soft-red);
+    font-family: var(--Red-hat);
+}
+
+.countdown .card{
+    width: 100%;
+    height: 10rem;
+    background-color: var(--Dark-desaturated-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
+    position: relative;
+
+}
+
+.countdown .card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.24rem;
+    background-color: #17181b;
+}
+
+.card h2{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.countdown p{
+    text-align: center; 
+    margin-top: 20px;
+    color: var(--Dark-desaturated-blue);
+    font-size: 2rem;
+   
+}
+
+.social-content{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    
+}
+
+.social-content a{
+   
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.social-content a:hover{
+    color: var(--Soft-red);
+}
+
+
+@media screen and (max-width: 900px){
+
+    .main-container{
+        background-size: auto;
+    }
+
+    .main-content{
+        left: 50px;
+        right: 50px;
+    }
+    .main-content .countdown{
+        grid-gap: 10px;
+    }
+
+     .countdown .card {
+        margin-right: .5rem;
+        height: 9rem;
+    }
+
+    .main-content h1{
+        font-size: 1rem;
+        margin-bottom: 50px;
+     }
+
+    .card h2{
+        font-size: 3rem;
+        width: 3.5rem;
+    }
+    
+    .countdown p{
+        font-size: .9rem;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+
+    .main-container{
+        background-size: auto 250px;
+    }
+
+
+    .countdown .card {
+        margin-right: .5rem;
+        height: 5rem;
+    }
+
+    .main-content h1{
+        margin-top: 20px;
+    }
+
+    .card h2{
+        font-size: 2rem;
+    }
+
+
+    .countdown .card::before{
+        height: .1rem;
+    }
+
+  
+
+    .social-content a{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (min-width: 960px){
+    .bd-container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
