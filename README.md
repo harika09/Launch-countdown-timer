@@ -7,7 +7,7 @@ Link: https://countdown-timer-launch.netlify.app/
 
 # Frontend Mentor - Launch countdown timer
 
-![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Launch countdown timer coding challenge](./assets/img/desktop-preview.jpg)
 
 ## Welcome! 👋
 
